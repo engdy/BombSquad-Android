@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+fragment_screen_slide_help.xml
+BombSquad
+
+Created by Andy Foulke on 12/2/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/imgHelp"/>
+
+</RelativeLayout>

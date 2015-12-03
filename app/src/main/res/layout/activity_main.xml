@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+activity_main.xml
+BombSquad
+
+Created by Andy Foulke on 12/2/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/ivBackground"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:scaleType="centerCrop"
+		android:src="@drawable/launch"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:id="@+id/btnCampaign"
+		android:layout_centerVertical="true"
+		android:layout_centerHorizontal="true"
+		android:onClick="clickedCampaign"
+		android:alpha="0.8"
+		android:text="@string/campaign_button" />
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:id="@+id/btnQuickPlay"
+		android:layout_below="@id/btnCampaign"
+		android:layout_centerHorizontal="true"
+		android:onClick="clickedQuickStart"
+		android:alpha="0.8"
+		android:text="@string/quickplay_button" />
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:id="@+id/btnSettings"
+		android:layout_below="@id/btnQuickPlay"
+		android:layout_centerHorizontal="true"
+		android:onClick="clickedSettings"
+		android:alpha="0.8"
+		android:text="@string/settings_button" />
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/btnHelp"
+		android:layout_below="@id/btnSettings"
+		android:layout_alignLeft="@id/btnSettings"
+		android:onClick="clickedHelp"
+		android:alpha="0.8"
+		android:text="@string/help_button" />
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/btnAbout"
+		android:layout_below="@id/btnSettings"
+		android:layout_alignRight="@id/btnSettings"
+		android:onClick="clickedAbout"
+		android:alpha="0.8"
+		android:text="@string/about_button" />
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:id="@+id/btnResume"
+		android:layout_below="@id/btnAbout"
+		android:layout_centerHorizontal="true"
+		android:onClick="clickedResume"
+		android:text="@string/resume_button"
+		android:alpha="0.8"
+		android:visibility="invisible" />
+</RelativeLayout>

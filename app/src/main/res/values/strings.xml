@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+strings.xml
+BombSquad
+
+Created by Andy Foulke on 12/2/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
+-->
+<resources>
+	<string name="app_name">BombSquad</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+
+	<!-- MainActivity -->
+	<string name="action_settings">Settings</string>
+	<string name="campaign_button">Campaign - Select Mission</string>
+	<string name="quickplay_button">QuickPlay - Create Mission</string>
+	<string name="settings_button">Settings</string>
+	<string name="help_button">Help</string>
+	<string name="about_button">About</string>
+	<string name="resume_button">Resume Mission</string>
+	<string name="title_activity_about">About BombSquad</string>
+
+	<!-- AboutActivity -->
+	<string name="overview_label">Overview</string>
+	<string name="about_overview1">
+		Bomb Squad is a cooperative board game where 2-6 players are members of a team,
+		operating a disposal robot with the mission to disarm bombs and save hostages.
+		The players work together, racing against the clock to provide the appropriate
+		instructions for the robot to achieve their mission objectives.
+	</string>
+	<string name="about_overview2">
+		This app is used along with the physical board game to manage the bomb timers
+		counting down during a mission, to help the players with the setup for each building
+		and mission in the game\'s Campaign mode, and also is used to stop the timers for
+		individual bombs when those bombs are successfully disarmed in time.  In addition,
+		we\'ve found that the app significantly enhances the game experience and makes that
+		tension of bombs counting down feel more real as you play the game.  We hope you
+		enjoy it as much as we do!
+	</string>
+	<string name="bgg_entry">BoardGameGeek Entry</string>
+	<string name="about_rules">Rules</string>
+	<string name="about_credits_label">Credits</string>
+	<string name="about_credits1">Game Design: Dan Keltner and David Short</string>
+	<string name="about_credits2">Game Development: Seth Jaffee</string>
+	<string name="about_credits3">Graphic Design: Luis Francisco</string>
+	<string name="about_credits4">Illustrator: George Patsouras</string>
+	<string name="about_credits5">App Development: Andy Foulke</string>
+	<string name="about_credits6">Music: Kevin MacLeod</string>
+	<string name="about_version">Version:</string>
+	<string name="title_activity_campaign">Campaign Setup</string>
+
+	<!-- CampaignActivity -->
+	<string name="cmp_select_mission">Select Mission</string>
+	<string name="cmp_start">Start!</string>
+	<string name="title_activity_quick_play">QuickPlay Setup</string>
+
+	<!-- QuickPlayActivity -->
+	<string name="qp_create_mission">Create Mission</string>
+	<string name="qp_total_mission_time">Total Mission Time</string>
+	<string name="qp_add">Add</string>
+	<string name="qp_remove">Remove</string>
+	<string name="qp_remove_instruct">(Long-click to remove a bomb)</string>
+	<string name="title_activity_add_bomb">Add Bomb</string>
+
+	<!-- AddBombActivity -->
+	<string name="addbomb_fatal">Fatal</string>
+	<string name="addbomb_nonfatal">Non-Fatal</string>
+	<string name="addbomb_addtitle">Add Bomb</string>
+	<string name="addbomb_edittitle">Edit Bomb</string>
+	<string name="addbomb_ok">OK</string>
+	<string name="addbomb_bombtype">Bomb Type</string>
+	<string name="addbomb_minutes">Minutes</string>
+	<string name="addbomb_seconds">Seconds</string>
+	<string name="addbomb_needtime">Your bomb needs a time delay!</string>
+	<string name="addbomb_duplicate">Duplicate Bomb</string>
+
+	<!-- SettingsActivity -->
+	<string name="stg_title">Settings</string>
+	<string name="stg_soundtrack_label">Soundtrack volume</string>
+	<string name="stg_visual_alert">Visual alert in last 30 seconds</string>
+	<string name="stg_audio_alert">Audio alert in last 10 seconds</string>
+	<string name="stg_bomb_sounds">Bomb explosion sounds</string>
+	<string name="stg_bomb_volume">Bomb volume</string>
+	<string name="stg_burn_level">BURN infiltration level</string>
+	<string name="stg_burn_zero">Silent game</string>
+	<string name="stg_burn_low">Some BURN chatter</string>
+	<string name="stg_burn_high">BURN taunts rising</string>
+	<string name="stg_burn_max">Maximum taunts from BURN</string>
+	<string name="title_activity_timer">BombSquad</string>
+
+	<!-- TimerActivity -->
+	<string name="play_start">Start</string>
+	<string name="play_pause">Pause</string>
+	<string name="timer_sure">Are you sure you\'ve deactivated bomb %1$d%2$s?</string>
+	<string name="timer_confirm">Confirm</string>
+	<string name="title_activity_mission">Mission</string>
+
+	<string name="hello_world">Hello world!</string>
+	<string name="title_activity_all_bombs">AllBombsActivity</string>
+	<string name="title_activity_single_bomb">SingleBombActivity</string>
+	<string name="title_activity_help">HelpActivity</string>
+</resources>

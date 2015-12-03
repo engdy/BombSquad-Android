@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+activity_addbomb.xml
+BombSquad
+
+Created by Andy Foulke on 12/02/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All Rights Reserved.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.playtmg.bombsquad.AddBombActivity">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="@string/addbomb_addtitle"
+		android:id="@+id/textAddBombTitle"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/textBombLabel"
+		android:text="@string/addbomb_bombtype"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@id/textAddBombTitle"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/textMinutes"
+		android:text="@string/addbomb_minutes"
+		android:layout_centerHorizontal="true"
+		android:layout_alignBaseline="@id/textBombLabel" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/textSeconds"
+		android:text="@string/addbomb_seconds"
+		android:layout_alignParentRight="true"
+		android:layout_alignBaseline="@id/textBombLabel" />
+
+	<Spinner
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/spinnerBomb"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@id/textBombLabel" />
+
+	<NumberPicker
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/pickerMinute"
+		android:layout_marginTop="80dp"
+		android:layout_below="@id/textMinutes"
+		android:layout_centerHorizontal="true"/>
+
+	<NumberPicker
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/pickerSecond"
+		android:layout_marginTop="80dp"
+		android:layout_alignParentRight="true"
+		android:layout_below="@id/textSeconds" />
+
+	<ToggleButton
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textOff="@string/addbomb_nonfatal"
+		android:textOn="@string/addbomb_fatal"
+		android:id="@+id/btnFatal"
+		android:layout_marginTop="20dp"
+		android:layout_below="@id/pickerMinute"
+		android:layout_centerHorizontal="true" />
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/addbomb_ok"
+		android:id="@+id/btnOK"
+		android:onClick="clickedOK"
+		android:layout_marginTop="20dp"
+		android:layout_below="@id/btnFatal"
+		android:layout_centerHorizontal="true"/>
+</RelativeLayout>

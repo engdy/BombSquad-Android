@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+activity_mission.xml
+BombSquad
+
+Created by Andy Foulke on 12/2/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.playtmg.bombsquad.MissionActivity">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+</RelativeLayout>

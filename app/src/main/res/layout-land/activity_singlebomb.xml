@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+land/activity_singlebomb.xml
+BombSquad
+
+Created by Andy Foulke on 12/2/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ff000000"
+              android:keepScreenOn="true">
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="60dp"
+		android:id="@+id/imgLogo"
+		android:src="@drawable/bslogo"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/btnStart"
+		android:text="@string/play_start"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentTop="true"
+		android:layout_toRightOf="@id/imgLogo"
+		android:id="@+id/bombContainer"/>
+
+	<android.support.v4.view.ViewPager
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/bombContainer"
+		android:id="@+id/pager"/>
+
+</RelativeLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+activity_settings.xml
+BombSquad
+
+Created by Andy Foulke on 12/02/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:orientation="vertical">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/textTitle"
+		android:text="@string/stg_title"
+		android:textSize="30sp"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+		android:layout_gravity="center"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		    android:text="@string/stg_soundtrack_label"
+		    android:layout_gravity="center"/>
+
+		<SeekBar
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/sliderSoundtrackVolume"
+			android:max="100"
+			android:layout_gravity="center"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Spinner
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:id="@+id/spinnerSoundtrack"/>
+
+		<View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+		<ToggleButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:id="@+id/btnSoundtrack"
+			android:onClick="clickedSoundtrack"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:id="@+id/textVisualAlertLabel"
+			android:text="@string/stg_visual_alert"/>
+
+		<View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+		<ToggleButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:id="@+id/btnVisualAlert"
+			android:onClick="clickedVisualAlert"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/textAudioAlertLabel"
+			android:text="@string/stg_audio_alert"
+		    android:layout_gravity="center"/>
+
+		<View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+		<ToggleButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btnAudioAlert"
+			android:onClick="clickedAudioAlert"
+			android:layout_gravity="center"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/textBombExplosionLabel"
+			android:text="@string/stg_bomb_sounds"
+			android:layout_gravity="center"/>
+
+		<View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+		<ToggleButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btnBombSounds"
+			android:onClick="clickedBombSounds"
+			android:layout_gravity="center"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/textBombVolumeLabel"
+			android:text="@string/stg_bomb_volume"
+			android:layout_gravity="center"/>
+
+		<SeekBar
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/sliderBombVolume"
+			android:max="100"
+			android:layout_gravity="center"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/textBURNLabel"
+			android:text="@string/stg_burn_level"
+			android:layout_gravity="center"/>
+
+		<SeekBar
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/sliderBURNLevel"
+			android:max="3"
+			android:layout_gravity="center"/>
+
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:id="@+id/textBURNDescription"
+	    android:text="EEE"
+	    android:layout_gravity="center"
+	    android:textSize="18sp"/>
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+activity_about.xml
+BombSquad
+
+Created by Andy Foulke on 12/02/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.playtmg.bombsquad.AboutActivity">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="40dp"
+		android:layout_margin="20dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:text="@string/overview_label"
+			android:id="@+id/textOverviewLabel"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/textOverview1"
+			android:layout_marginTop="10dp"
+			android:layout_below="@id/textOverviewLabel"
+			android:text="@string/about_overview1" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/textOverview2"
+			android:layout_marginTop="20dp"
+			android:layout_below="@id/textOverview1"
+			android:text="@string/about_overview2" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btnBgg"
+			android:layout_below="@id/textOverview2"
+			android:layout_marginTop="10dp"
+			android:onClick="clickedBGG"
+			android:text="@string/bgg_entry"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btnRules"
+			android:layout_alignBaseline="@id/btnBgg"
+			android:layout_toRightOf="@id/btnBgg"
+			android:onClick="clickedRules"
+			android:text="@string/about_rules"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:textAppearanceLarge"
+			android:text="@string/about_credits_label"
+			android:id="@+id/textCreditsLabel"
+			android:layout_marginTop="20dp"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/btnBgg"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/about_credits1"
+			android:id="@+id/textCredits1"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/textCreditsLabel"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/about_credits2"
+			android:id="@+id/textCredits2"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/textCredits1"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/about_credits3"
+			android:id="@+id/textCredits3"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/textCredits2"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/about_credits4"
+			android:id="@+id/textCredits4"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/textCredits3"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/about_credits5"
+			android:id="@+id/textCredits5"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/textCredits4"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/about_credits6"
+			android:id="@+id/textCredits6"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/textCredits5"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:textAppearanceLarge"
+			android:text="@string/about_version"
+			android:id="@+id/textVersionLabel"
+			android:layout_marginTop="20dp"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/textCredits6"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="1.2.3"
+			android:id="@+id/textVersion"
+			android:layout_alignBaseline="@id/textVersionLabel"
+			android:layout_toRightOf="@id/textVersionLabel"
+			android:layout_marginLeft="10dp"/>
+	</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+activity_allbombs.xml
+BombSquad
+
+Created by Andy Foulke on 12/02/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:keepScreenOn="true">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/imgLogo"
+		android:src="@drawable/bslogo"
+		android:scaleType="centerCrop"
+		android:layout_alignParentTop="true"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/txtMainTime"
+		android:text="00:00"
+		android:layout_below="@id/imgLogo"
+		android:gravity="center_horizontal"
+		android:background="#ff000000"
+		android:textColor="#ffff0000"
+		android:textSize="100sp"/>
+
+	<ListView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+		android:id="@+id/listBombs"
+		android:layout_below="@id/txtMainTime"
+		android:layout_alignParentLeft="true"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/btnStart"
+		android:text="@string/play_start"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="20dp"
+		android:layout_marginRight="20dp"/>
+</RelativeLayout>
