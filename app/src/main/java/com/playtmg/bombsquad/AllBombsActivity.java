@@ -95,7 +95,10 @@ public class AllBombsActivity extends RunningActivity {
 	 */
 	@Override
 	protected void focusBomb(Bomb b) {
-		int position = bombs.getBombs().indexOf(b);
+		int position = 0;
+		if (b != null) {
+			position = bombs.getBombs().indexOf(b);
+		}
 		Intent intent = new Intent(this, SingleBombActivity.class);
 		intent.putExtra(SingleBombActivity.BOMB_POSITION, position);
 		startActivity(intent);

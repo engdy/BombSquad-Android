@@ -15,7 +15,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,6 @@ public class SingleBombActivity
 	private Bomb currentBomb;
 	private SingleBombActivity activity = this;
 	public static final String BOMB_POSITION = "com.playtmg.bombsquad.BOMB_POSITION";
-	private DisplayMetrics metrics;
 	private float textSize;
 	private List<TextView> tvList;
 
@@ -65,7 +63,9 @@ public class SingleBombActivity
 		pager.setOnPageChangeListener(this);
 		bombContainer = (LinearLayout)findViewById(R.id.bombContainer);
 		currentBomb = bombs.getBomb(0);
-		metrics = getResources().getDisplayMetrics();
+		DisplayMetrics metrics = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		Log.d(TAG, metrics.toString());
 	}
 
 	/**

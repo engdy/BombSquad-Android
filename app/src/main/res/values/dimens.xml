@@ -11,5 +11,5 @@ Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
 	<dimen name="activity_horizontal_margin">16dp</dimen>
 	<dimen name="activity_vertical_margin">16dp</dimen>
 
-	<dimen name="single_bomb_textsize">100sp</dimen>
+	<dimen name="single_bomb_textsize">150sp</dimen>
 </resources>

@@ -118,7 +118,7 @@ public abstract class RunningActivity extends FragmentActivity implements View.O
 	/**
 	 * onClick method
 	 * <p>
-	 * If user clicked on bomb icon or time button, they clicked on a row in the {@link ListView}.
+	 * If user clicked on bomb icon or time button, they clicked on a row in the {@link android.widget.ListView}.
 	 * The particular {@link Bomb} has been stored in the view's tag.
 	 *
 	 * @param v
