@@ -3,6 +3,7 @@
  * BombSquad
  *
  * Created by Andy Foulke on 12/2/2015
+ * Last edited by Andy Foulke on 12/17/2015
  * Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
  */
 package com.playtmg.bombsquad;
@@ -37,7 +38,6 @@ public class QuickPlayActivity extends ActionBarActivity implements AdapterView.
 
 	private Button btnStart;
 	private Button btnAdd;
-//	private Button btnRemove;
 	private TextView textTotalTime;
 	private ListView listBombs;
 	private BombList bombList;
@@ -58,7 +58,6 @@ public class QuickPlayActivity extends ActionBarActivity implements AdapterView.
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		btnStart = (Button)findViewById(R.id.btnStart);
 		btnAdd = (Button)findViewById(R.id.btnAdd);
-//		btnRemove = (Button)findViewById(R.id.btnRemove);
 		textTotalTime = (TextView)findViewById(R.id.textTotalTime);
 		bombList = BombSquadData.getInstance().getBombList();
 		listBombs = (ListView)findViewById(R.id.listBombs);
@@ -158,15 +157,9 @@ public class QuickPlayActivity extends ActionBarActivity implements AdapterView.
 		startActivityForResult(intent, ADD_BOMB_MODE);
 	}
 
-	public void clickedRemove(View btn) {
-		Log.d(TAG, "Clicked remove");
-		Toast.makeText(this, "Button not implemented - use long click on bombs to delete", Toast.LENGTH_SHORT).show();
-	}
-
 	private void checkButtons() {
 		textTotalTime.setText(bombList.maxTimeAsString());
 		int count = bombList.bombCount();
-//		btnRemove.setEnabled(count > 0);
 		btnStart.setEnabled(count > 0);
 		btnAdd.setEnabled(count < 5);  // Can't have more than 4 bombs per game designer
 	}

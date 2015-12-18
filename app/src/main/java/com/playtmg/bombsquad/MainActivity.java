@@ -3,6 +3,7 @@
  * BombSquad
  *
  * Created by Andy Foulke on 12/2/2015
+ * Modified by Andy Foulke on 12/17/2015
  * Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
  */
 package com.playtmg.bombsquad;
@@ -25,6 +26,7 @@ public class MainActivity extends Activity {
 	private BURN burn;
 	private BSTimer bsTimer;
 	private Button btnResume;
+	private boolean shouldShowResume = false;
 
 	/**
 	 * onCreate method
@@ -60,7 +62,7 @@ public class MainActivity extends Activity {
 		super.onResume();
 		bombList = BombSquadData.getInstance().getBombList();
 		long timeLeft = bombList.findMaxTime() - bsTimer.getElapsedMillis();
-		boolean shouldShowResume = bombList.showResumeButton() && bombList.bombCount() > 0 && timeLeft > 0;
+		shouldShowResume = bombList.showResumeButton() && bombList.bombCount() > 0 && timeLeft > 0;
 		btnResume.setEnabled(shouldShowResume);
 		btnResume.setVisibility(shouldShowResume ? View.VISIBLE : View.INVISIBLE);
 		bsTimer.stopMusic();
@@ -74,6 +76,9 @@ public class MainActivity extends Activity {
 
 	public void clickedQuickStart(View btn) {
 		Log.d(TAG, "Clicked quickstart");
+		if (!shouldShowResume) {
+			BombSquadData.getInstance().setBombList(new BombList());
+		}
 		Intent intent = new Intent(this, QuickPlayActivity.class);
 		startActivity(intent);
 	}

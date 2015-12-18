@@ -30,14 +30,30 @@ Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
 		android:textColor="#ffff0000"
 		android:textSize="100sp"/>
 
+	<TextView
+		android:layout_width="60dp"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:id="@+id/txtDisarmInstruct"
+		android:text="@string/all_disarm_instruct"
+		android:layout_below="@id/txtMainTime"
+		android:layout_alignParentLeft="true"/>
+
 	<ListView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="20dp"
 		android:layout_marginLeft="20dp"
 		android:id="@+id/listBombs"
-		android:layout_below="@id/txtMainTime"
+		android:layout_below="@id/txtDisarmInstruct"
 		android:layout_alignParentLeft="true"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/txtFocusInstruct"
+		android:text="@string/all_focus_instruct"
+		android:layout_toRightOf="@id/txtDisarmInstruct"
+		android:layout_above="@id/listBombs"/>
 
 	<Button
 		android:layout_width="wrap_content"

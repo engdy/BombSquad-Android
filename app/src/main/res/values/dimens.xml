@@ -1,5 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+dimens.xml
+BombSquad
+
+Created by Andy Foulke on 12/17/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
+-->
 <resources>
 	<!-- Default screen margins, per the Android Design guidelines. -->
 	<dimen name="activity_horizontal_margin">16dp</dimen>
 	<dimen name="activity_vertical_margin">16dp</dimen>
+
+	<dimen name="single_bomb_textsize">100sp</dimen>
 </resources>

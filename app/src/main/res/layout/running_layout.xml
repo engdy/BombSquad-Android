@@ -13,6 +13,7 @@ Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
 	<ImageButton
 		android:layout_width="50dp"
 		android:layout_height="50dp"
+		android:layout_marginRight="5dp"
 		android:id="@+id/btnBomb" />
 	<Button
 		android:layout_width="wrap_content"

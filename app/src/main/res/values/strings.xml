@@ -96,8 +96,11 @@ Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
 	<string name="timer_confirm">Confirm</string>
 	<string name="title_activity_mission">Mission</string>
 
-	<string name="hello_world">Hello world!</string>
+	<!-- AllBombsActivity -->
 	<string name="title_activity_all_bombs">AllBombsActivity</string>
+	<string name="all_disarm_instruct">Click to disarm</string>
+	<string name="all_focus_instruct">Click to focus on bomb</string>
+
 	<string name="title_activity_single_bomb">SingleBombActivity</string>
 	<string name="title_activity_help">HelpActivity</string>
 </resources>

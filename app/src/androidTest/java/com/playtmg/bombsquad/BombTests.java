@@ -1,28 +1,34 @@
+/*
+ * BombTest.java
+ * BombSquad
+ *
+ * Created by Andy Foulke on 4/4/2015
+ * Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
+ */
 package com.playtmg.bombsquad;
 
 import android.os.Parcel;
+import android.test.suitebuilder.annotation.SmallTest;
 import junit.framework.TestCase;
 
-/**
- * Created by engdy on 4/4/15.
- */
-public class BombTest extends TestCase {
+public class BombTests extends TestCase {
 	protected Bomb bomb;
 
-	public BombTest(String name) {
+	public BombTests(String name) {
 		super(name);
 	}
 
-	public BombTest() {
-		this("BombTest");
+	public BombTests() {
+		this("BombTests");
 	}
 
 	@Override
-	public void setUp() throws Exception {
+	protected void setUp() throws Exception {
 		super.setUp();
 		bomb = new Bomb(1, "A", 65432, true);
 	}
 
+	@SmallTest
 	public void testBombCreation() {
 		assertEquals(1, bomb.getLevel());
 		assertEquals("A", bomb.getLetter());
@@ -32,12 +38,14 @@ public class BombTest extends TestCase {
 		assertEquals(Bomb.BombState.LIVE, bomb.getState());
 	}
 
+	@SmallTest
 	public void testBombDisplay() {
-		assertEquals("1A 01:05.43", bomb.toString());
-		assertEquals("00:34.43", bomb.timeLeftFromElapsed(31000));
-		assertEquals("00:00.00", bomb.timeLeftFromElapsed(70000));
+		assertEquals("1A 01:05", bomb.toString());
+		assertEquals("00:34", bomb.timeLeftFromElapsed(31000));
+		assertEquals("00:00", bomb.timeLeftFromElapsed(70000));
 	}
 
+	@SmallTest
 	public void testBombChange() {
 		bomb.setFatal(false);
 		assertFalse(bomb.isFatal());
@@ -52,12 +60,19 @@ public class BombTest extends TestCase {
 		assertEquals(Bomb.BombState.DETONATED, bomb.getState());
 	}
 
+	@SmallTest
 	public void testBombParcel() {
 		Parcel parcel = Parcel.obtain();
 		bomb.writeToParcel(parcel, 0);
 		parcel.setDataPosition(0);
 		Bomb createdFromParcel = Bomb.CREATOR.createFromParcel(parcel);
 		assertEquals(bomb, createdFromParcel);
+	}
+
+	@SmallTest
+	public void testBombCopy() {
+		Bomb b2 = new Bomb(bomb);
+		assertEquals(b2, bomb);
 	}
 
 	@Override

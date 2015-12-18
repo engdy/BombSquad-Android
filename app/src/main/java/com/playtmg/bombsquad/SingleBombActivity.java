@@ -63,18 +63,6 @@ public class SingleBombActivity
 		adapter = new SlidePagerAdapter();
 		pager.setAdapter(adapter);
 		pager.setOnPageChangeListener(this);
-		// This code is intended to dynamically size the text of the main time display
-		pager.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
-			@Override
-			public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-				Log.d(TAG, "top = " + top + ", bottom = " + bottom);
-				textSize = ((bottom - top) / metrics.density) - 40f;
-				Log.d(TAG, "textSize = " + textSize);
-				for (TextView tv: tvList) {
-					tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
-				}
-			}
-		});
 		bombContainer = (LinearLayout)findViewById(R.id.bombContainer);
 		currentBomb = bombs.getBomb(0);
 		metrics = getResources().getDisplayMetrics();
@@ -110,13 +98,6 @@ public class SingleBombActivity
 			bombContainer.addView(btnBomb);
 		}
 		pager.setCurrentItem(pos, false);
-	}
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-		textSize = pager.getHeight() / metrics.density;
-		Log.d(TAG, "textSize = " + textSize);
 	}
 
 	/**
@@ -227,7 +208,7 @@ public class SingleBombActivity
 			tv.setTag(bombs.getBomb(position));
 			tv.setText(bombs.getBomb(position).timeLeftFromElapsed(bsTimer.getElapsedMillis()));
 			tv.setOnClickListener(activity);
-			tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 200f);
+//			tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 200f);
 			container.addView(view, 0);
 			tvList.add(tv);
 			return view;

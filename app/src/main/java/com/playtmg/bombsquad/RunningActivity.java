@@ -141,6 +141,11 @@ public abstract class RunningActivity extends FragmentActivity implements View.O
 				clickedStart();
 				return;
 
+			case R.id.txtMainTime:
+				b = bombs.findUrgentBomb();
+				focusBomb(b);
+				return;
+
 			default:
 				// Ignore
 		}

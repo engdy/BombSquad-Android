@@ -43,9 +43,23 @@ public class AllBombsActivity extends RunningActivity {
 		btnStart = (Button)findViewById(R.id.btnStart);
 		btnStart.setOnClickListener(this);
 		txtMainTime = (TextView)findViewById(R.id.txtMainTime);
+		txtMainTime.setOnClickListener(this);
 		listBombs = (ListView)findViewById(R.id.listBombs);
 		adapter = new RunningListAdapter(this, bombs);
 		listBombs.setAdapter(adapter);
+	}
+
+	/**
+	 * onResume method
+	 * <p>
+	 * Update button states in case coming back from SingleBombActivity
+	 */
+	@Override
+	protected void onResume() {
+		super.onResume();
+		for (Bomb b: bombs.getBombs()) {
+			updateBombButton(b);
+		}
 	}
 
 	/**
@@ -138,9 +152,16 @@ public class AllBombsActivity extends RunningActivity {
 		row = listBombs.findViewWithTag(b);
 		if (row != null) {
 			ImageButton btnBomb = (ImageButton)row.findViewById(R.id.btnBomb);
+			Button btnTime = (Button)row.findViewById(R.id.btnTime);
 			if (b.getState() == Bomb.BombState.DISABLED) {
 				btnBomb.setImageResource(R.drawable.greencheck);
 				btnBomb.setEnabled(false);
+				btnTime.setEnabled(false);
+			} else if (b.getState() == Bomb.BombState.DETONATED) {
+				btnBomb.setImageResource(R.drawable.redex);
+				btnBomb.setEnabled(false);
+				btnTime.setText("00:00");
+				btnTime.setEnabled(false);
 			}
 		}
 	}

@@ -4,6 +4,7 @@ activity_campaign.xml
 BombSquad
 
 Created by Andy Foulke on 12/2/2015
+Modified by Andy Foulke on 12/11/2015
 Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,9 +18,9 @@ Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
 		android:layout_height="40dp"
 		android:id="@+id/spinnerCampaign"
 		android:layout_marginTop="20dp"
-		android:background="#CCCCCC"
-		android:popupBackground="#DDDDDD"
+		android:popupBackground="#CCC"
 		android:spinnerMode="dropdown"
+		android:textSize="40sp"
 		android:prompt="@string/cmp_select_mission"
 		android:layout_alignParentTop="true"
 		android:layout_centerHorizontal="true"/>
@@ -33,6 +34,13 @@ Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
 		android:layout_alignParentBottom="true"
 		android:layout_centerHorizontal="true"/>
 
+	<android.support.v4.view.ViewPager
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/pagerCampaign"
+		android:layout_below="@id/spinnerCampaign"
+		android:layout_above="@id/btnStart"/>
+<!--
 	<ImageView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
@@ -42,4 +50,5 @@ Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
 		android:layout_below="@id/spinnerCampaign"
 		android:layout_above="@id/btnStart"
 		android:layout_centerHorizontal="true"/>
+-->
 </RelativeLayout>

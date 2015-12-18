@@ -18,10 +18,11 @@ import android.widget.ImageButton;
 import java.util.List;
 
 /**
- * {@link ArrayAdapter} used by {@link AllBombsActivity} to populate {@link ListView}
+ * {@link ArrayAdapter} used by {@link AllBombsActivity} to populate {@link android.widget.ListView}
  * of the session's collection of {@link Bomb}s
  */
 public class RunningListAdapter extends ArrayAdapter<Bomb> {
+	public static final String TAG = RunningListAdapter.class.getSimpleName();
 	private Context context;
 	private List<Bomb> bombs;
 
@@ -33,6 +34,9 @@ public class RunningListAdapter extends ArrayAdapter<Bomb> {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		if (convertView != null) {
+			return convertView;
+		}
 		LayoutInflater inflater = ((Activity)context).getLayoutInflater();
 		View row = inflater.inflate(R.layout.running_layout, parent, false);
 		Bomb b = bombs.get(position);

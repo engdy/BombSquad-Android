@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+w480dp/dimens.xml
+BombSquad
+
+Created by Andy Foulke on 12/17/2015
+Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
+-->
+<resources>
+	<dimen name="single_bomb_textsize">150sp</dimen>
+</resources>

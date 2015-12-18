@@ -6,7 +6,7 @@ BombSquad
 Created by Andy Foulke on 12/2/2015
 Copyright (c) 2015 Tasty Minstrel Games.  All rights reserved
 -->
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.playtmg.bombsquad.TouchImageView xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:id="@+id/imgMission"
               android:scaleType="centerInside"
