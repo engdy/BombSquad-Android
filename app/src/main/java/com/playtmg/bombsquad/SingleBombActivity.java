@@ -134,8 +134,18 @@ public class SingleBombActivity
 			btnBomb.setImageResource(R.drawable.redex);
 			btnBomb.setEnabled(false);
 			text.setText("00:00");
+			text.setBackgroundColor(Color.BLACK);
 		} else {
 			text.setText(b.timeLeftFromElapsed(duration));
+			if (shouldVisuallyAlert) {
+				long diff = b.getMillisDuration() - duration;
+				if (diff < 30000) {
+					long mag = 30000L - diff;
+					long sdiff = diff % 1000L;
+					int redVal = Math.min(255, (int) (((mag * sdiff) / 1000L) / 117L));
+					text.setBackgroundColor(Color.argb(0xFF, redVal, 0, 0));
+				}
+			}
 		}
 	}
 
@@ -150,6 +160,10 @@ public class SingleBombActivity
 		if (b.getState() == Bomb.BombState.DISABLED) {
 			btnBomb.setImageResource(R.drawable.greencheck);
 			btnBomb.setEnabled(false);
+			TextView text = (TextView)pager.findViewWithTag(b);
+			if (text != null) {
+				text.setBackgroundColor(Color.BLACK);
+			}
 		}
 	}
 
@@ -208,7 +222,6 @@ public class SingleBombActivity
 			tv.setTag(bombs.getBomb(position));
 			tv.setText(bombs.getBomb(position).timeLeftFromElapsed(bsTimer.getElapsedMillis()));
 			tv.setOnClickListener(activity);
-//			tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 200f);
 			container.addView(view, 0);
 			tvList.add(tv);
 			return view;
